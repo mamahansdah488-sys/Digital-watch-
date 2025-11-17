@@ -1,18 +1,15 @@
-function updateClock() {
-  const now = new Date();
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  let seconds = now.getSeconds();
-
-  // Add leading zeros.
-  hours = hours < 10 ? "0" + hours : hours;
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  seconds = seconds < 10 ? "0" + seconds : seconds;
-
-  const timeString = `${hours}:${minutes}:${seconds}`;
-  document.getElementById("digitalClock").textContent = timeString;
-}
-
-// Update every second
-setInterval(updateClock, 1000);
-updateClock(); // initial call
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Watch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="clock-container">
+<div id="digitalClock">00:00:00</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
